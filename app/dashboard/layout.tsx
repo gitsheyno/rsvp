@@ -2,8 +2,17 @@
 'use client'
 import Shell from '@/components/Shell'
 import { usePathname } from 'next/navigation'
+import { ReactNode } from 'react'
 
-const Dashboard = ({ children, rsvps, events }) => {
+const Dashboard = ({
+  children,
+  rsvps,
+  events,
+}: {
+  children: ReactNode
+  rsvps: ReactNode
+  events: ReactNode
+}) => {
   const path = usePathname()
 
   return (

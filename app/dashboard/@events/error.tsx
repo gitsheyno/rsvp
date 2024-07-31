@@ -1,6 +1,12 @@
 'use client'
 
-const EventError = ({ error, reset }) => {
+const EventError = ({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string }
+  reset: () => void
+}) => {
   return (
     <div>
       <h2>Something bad happened :( </h2>

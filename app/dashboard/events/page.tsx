@@ -9,7 +9,7 @@ const Events = async () => {
 
   return (
     <div>
-      {events.map((event) => (
+      {events.map((event: any) => (
         <div key={event.id}>
           <Link href={`/dashboard/events/${event.id}`}>{event.name}</Link>
         </div>

@@ -1,4 +1,3 @@
-// /components/SigninForm.tsx
 'use client'
 
 import { useFormState } from 'react-dom'
@@ -11,7 +10,7 @@ const initState = { message: null }
 
 const SigninForm = () => {
   const [formState, action] = useFormState<{ message: string | null }>(
-    signinUser,
+    signinUser as any,
     initState
   )
 

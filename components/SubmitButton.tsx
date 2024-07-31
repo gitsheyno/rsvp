@@ -4,7 +4,7 @@
 import { Button } from '@nextui-org/react'
 import { useFormStatus } from 'react-dom'
 
-const Submit = ({ label, ...btnProps }) => {
+const Submit = ({ label, ...btnProps }: { label: string }) => {
   const { pending } = useFormStatus()
 
   return (

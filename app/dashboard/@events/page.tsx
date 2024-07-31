@@ -1,4 +1,3 @@
-// /app/dashboard/@events/page.tsx
 import { getEventsForDashboard } from '@/utils/events'
 import { getCurrentUser } from '@/utils/users'
 import { Chip } from '@nextui-org/react'
@@ -30,7 +29,7 @@ const EventsRsvp = async () => {
                 <span>{event.name}</span>
               </Link>
               <span>
-                <Chip size="sm" color={statusColors[event.status]}>
+                <Chip size="sm" color={statusColors[event.status] as any}>
                   {event.status}
                 </Chip>
               </span>

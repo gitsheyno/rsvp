@@ -11,7 +11,7 @@ const initState = { message: null }
 
 const SignupForm = () => {
   const [formState, action] = useFormState<{ message: string | null }>(
-    registerUser,
+    registerUser as any,
     initState
   )
 
