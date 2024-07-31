@@ -1,4 +1,3 @@
-// /utils/rsvps.ts
 import 'server-only'
 import { db } from '@/db/db'
 import { and, desc, eq, inArray } from 'drizzle-orm'
@@ -33,9 +32,9 @@ export const getRsvpsForDashboard = memoize(
   },
   {
     persist: true,
-    revalidateTags: () => ['guests'],
+    revalidateTags: () => ['dashboard:rsvps'],
     suppressWarnings: true,
     log: ['datacache', 'verbose'],
-    logid: 'guests',
+    logid: 'dashboard:rsvps',
   }
 )

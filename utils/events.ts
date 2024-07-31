@@ -29,9 +29,7 @@ export const getEventsForDashboard = memoize(
   },
   {
     persist: true,
-    revalidateTags: () => ['guests'],
+    revalidateTags: () => ['dashboard:events'],
     suppressWarnings: true,
-    log: ['datacache', 'verbose'],
-    logid: 'guests',
   }
 )

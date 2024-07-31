@@ -3,7 +3,6 @@ import type { NextRequest } from 'next/server'
 import { COOKIE_NAME } from './utils/constants'
 
 export function middleware(request: NextRequest) {
-  console.log('req', request)
   if (request.nextUrl.pathname.startsWith('/dashboard')) {
     if (!request.cookies.has(COOKIE_NAME)) {
       console.log(request.url)
